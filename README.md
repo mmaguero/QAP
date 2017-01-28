@@ -12,4 +12,4 @@ Escrita en Javascript con POO, HTML5 Y CSS3
 + Tener en cuenta el tiempo de ejecución según los valores de parámetros, es probable que el navegador solicite acabar con la ejecución, pero se debe continuar para culminarla.
 
 ###Nota
-En (AlgoritmoGenetico.js)[src/AlgoritmoGenetico.js] se pueden cambiar los valores de parámetros para mejorar el cálculo de fitness, no obstante, el tiempo de ejecución podría sobrepasarse.
+En [AlgoritmoGenetico.js](src/AlgoritmoGenetico.js) se pueden cambiar los valores de parámetros para mejorar el cálculo de fitness, no obstante, el tiempo de ejecución podría sobrepasarse.
