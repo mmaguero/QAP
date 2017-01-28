@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+	lang="es-es">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>::: QAP | Algortimo Genético :::</title>
+<!-- Pantalla principal -->
+<style>
+div {
+	margin-top: 15px;
+	border: solid 1px black;
+	padding: 7px;
+	color: gray;
+	font-family: Verdana, Times, serif;
+	background-color: #FBFAFA;
+}
+</style>
+
+<script type="text/javascript" src="./src/Principal.js"></script>
+<script type="text/javascript" src="./src/Utiles.js"></script>
+<script type="text/javascript" src="./src/Data.js"></script>
+<script type="text/javascript" src="./src/Cromosoma.js"></script>
+<script type="text/javascript" src="./src/Operaciones.js"></script>
+<script type="text/javascript" src="./src/AlgoritmoGenetico.js"></script>
+
+</head>
+<body>
+
+	<div>
+		<h1>QAP</h1>
+		<div>
+			<h2>Valores</h2>
+			<hr>
+
+			<form name="leerArchivo" id="leerArchivo">
+
+				<b>No. Población</b> <small>(Formato: 99)</small><br> <input
+					id="poblacion" name="poblacion" type="number" value="40" min="1"
+					max="999"
+					onblur="(parseInt(this.value)<1||parseInt(this.value)>999)?this.value='':this.value=this.value">
+				<br> <b>Archivo de QAPLIB</b> <small>(Por ejemplo:
+					tai256c.dat)</small><br> <input id="archivo" name="archivo"
+					type="file" size="50" onchange="Principal.proArchivo(this.files);"
+					title="Seleccione un archivo .dat de QAP"> <br> <b>Algoritmo</b>
+				<br> <select id="algoritmo" name="algoritmo" size="3">
+					<option value="B" selected>Básico</option>
+					<option value="W">Baldwin</option>
+					<option value="L">Lamarck</option>
+				</select>
+				<br>
+
+				<div id="matrices" style="display: none;"></div>
+
+				<br> <input type="button"
+					onClick="Principal.ejecutar(document.getElementById('matrices').innerHTML, document.getElementById('poblacion').value, document.getElementById('algoritmo').value);"
+					value="Ejecutar" title="Ejecutar algoritmos genéticos simples">
+				<input type="reset" value="Limpiar"
+					title="Limpiar campos del formulario"> <input type="button"
+					onClick="location.reload(true);" value="Recargar"
+					title="Se perderán los resultados al recargar la página">
+
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
