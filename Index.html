@@ -25,7 +25,7 @@
 <body>
 
 	<div class="container-fluid">
-		<h1>QAP</h1>
+		<h1><a href="http://anjos.mgi.polymtl.ca/qaplib/inst.html" title="QAPLIB">QAP</a></h1>
 		<div class="jumbotron">
 			<h2>Valores</h2>
 			<hr>
@@ -37,7 +37,7 @@
 					max="999"
 					onblur="(parseInt(this.value)<1||parseInt(this.value)>999)?this.value='':this.value=this.value">
 				<br> <b>Archivo de QAPLIB</b> <small>(Por ejemplo:
-					tai256c.dat)</small><br> <input id="archivo" name="archivo"
+					<a href="https://raw.githubusercontent.com/mmaguero/QAP/master/qap.datos/tai256c.dat">tai256c.dat</a>)</small><br> <input id="archivo" name="archivo"
 					type="file" size="50" onchange="Principal.proArchivo(this.files);"
 					title="Seleccione un archivo .dat de QAP"> <br> <b>Algoritmo</b>
 				<br> <select id="algoritmo" name="algoritmo" size="3">
@@ -51,12 +51,12 @@
 
 				<br> <input type="button"
 					onClick="Principal.ejecutar(document.getElementById('matrices').innerHTML, document.getElementById('poblacion').value, document.getElementById('algoritmo').value);"
-					value="Ejecutar" title="Ejecutar algoritmos genéticos simples">
+					value="Ejecutar" title="Ejecutar algoritmos genéticos simples" class="btn btn-secondary">
 				<input type="reset" value="Limpiar"
-					title="Limpiar campos del formulario"> <input type="button"
+					title="Limpiar campos del formulario" class="btn btn-secondary"> <input type="button"
 					onClick="location.reload(true);" value="Recargar"
-					title="Se perderán los resultados al recargar la página">
-					<a href="https://github.com/mmaguero/QAP" title="MMaguero"> Volver a Github</a>
+					title="Se perderán los resultados al recargar la página" class="btn btn-secondary">
+					<a href="https://github.com/mmaguero/QAP" title="MMaguero" class="btn btn-link"> Volver a Github >></a>
 
 			</form>
 		</div>
